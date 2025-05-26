@@ -212,7 +212,7 @@ function buyDivider() {
 function buyPrestigeUpgrade() {
   if (prestigepoints.gte(PPupgradeCost)) {
     prestigepoints = prestigepoints.minus(PPupgradeCost);
-    addendpersecond = addendpersecond.mul(1.1);
+    addendpersecond = addendpersecond.add(0.1);
     PPupgradeCost = PPupgradeCost.times(2);
     updateDisplay();
   }
@@ -360,8 +360,8 @@ function gameLoop() {
   if(mulautobuy.gte(1) && money.gte(upgradeCost2)) buyMulti();
   if(expautobuy.gte(1) && money.gte(upgradeCost3)) buyExponent();
   if(divautobuy.gte(1) && money.gte(upgradeCost4)) buyDivider();
-  if(ppauto.gte(1) && prestigepoints.gte(PPupgradeCost)) buyppmoneyUpgrade();
-  RPgain = prestigepoints.max(1).pow(0.15).div(8).sub(1).max(0).floor()
+  if(ppauto.gte(1) && prestigepoints.gte(PPupgrade2Cost)) buyppmoneyUpgrade();
+  RPgain = prestigepoints.max(1).pow(0.15).div(8).sub(1).max(0).floor();
   updateDisplay();
 
 }
