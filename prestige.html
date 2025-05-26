@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Incremental Game</title>
+  <link rel="stylesheet" href="prestige.css">
+  <script src="https://cdn.jsdelivr.net/gh/Patashu/break_eternity.js/break_eternity.js"></script>
+</head>
+<body>
+  <div id="panel-container">
+          <div id="gem-container" class="panel" style="display: none;">
+    <div id="gems-display">💎 Gems: 0.000</div>
+    <div id="gem-upgrade" onclick="buyGemUpgrade()">
+            <div id="gemchance-display">Gem chance: +1% to gem chance</div>
+    <div id="gemcost-display">Cost: 1 gem</div>
+    </div>
+    <div id="gem-upgrade" onclick="buyGemMoney()">
+        <div id="gem-money-display">Multiply money/s by 5: X1</div>
+    <div id="gemcost2-display">Cost: 1 gem</div>
+    </div>
+    <div id="gem-upgrade" onclick="buyGemPP()">
+        <div id="gem-pp-display">Double pp gain: X1</div>
+    <div id="gemcost3-display">Cost: 2 gem</div>
+    </div>
+  </div>
+
+
+  <div id="game-container" class="panel">
+    <div id="money-display">💰 Money: $0.000 (0.000/s)</div>
+    <div id="upgrade" onclick="buyUpgrade()">
+            <div id="addend-display">Addend: +$0.000/s</div>
+    <div id="cost-display">Cost: $1.000</div>
+    </div>
+    <div id="upgrade" onclick="buyMulti()">
+        <div id="multiply-display">Multiply: X1</div>
+    <div id="cost2-display">Cost: $100</div>
+    </div>
+    <div id="upgrade" onclick="buyExponent()">
+        <div id="exponent-display">Exponent: ^1.000</div>
+    <div id="cost3-display">Cost: $1e6</div>
+    </div>
+    <div id="upgrade" onclick="buyDivider()">
+      <div id="divider-display">Divide upgrades cost by 10: /1</div>
+  <div id="cost4-display">Cost: $1e35</div>
+  </div>
+  </div>
+
+
+  <div id="prestige-container" class="panel" style="display: none;">
+    <div id="money-display">⭐ Prestige: Reset your upgrades and coins for prestige points</div>
+    <div id="pp-display">You have <span id="pps">0</span> prestige points</div>
+    <div id="prestige-reset" onclick="prestige()">
+            <div id="addend-display">Prestige for <span id="pp-gain">0</span> prestige points</div>
+    <div id="cost-display">Cost: $1.000e10</div>
+    </div>
+    <div id="prestige-upgrade" onclick="buyPrestigeUpgrade()">
+      <div id="addendgen-display">Addend gen: +0.000 Addend/s</div>
+      <div id="ppcost-display">Cost: 1 PP</div>
+  </div>
+
+    <div id="prestige-upgrade" onclick="buyppmoneyUpgrade()">
+      <div id="bettermul-display">Better multiply: x1.000/s</div>
+      <div id="ppcost2-display">Cost: 1 PP</div>
+  </div>
+  </div>
+
+
+  <div id="automation-container" class="panel" style="display: none;">
+    <div id="money-display">⚙️ Automation:There are some upgrades that will automate game</div>
+    <div id="automation-upgrade" onclick="buyPrestigeGen()">
+      <div id="addendgen-display">Gain 1% PPs on prestige per second</div>
+      <div id="ppcost-display">Cost: 100 PP</div>
+  </div>
+  <div id="automation-upgrade" onclick="buyMultiautobuy()">
+    <div id="addendgen-display">Autobuy Multiplier</div>
+    <div id="ppcost-display">Cost: $1e25 </div>
+  </div>
+  <div id="automation-upgrade" onclick="buyExponentautobuy()">
+    <div id="addendgen-display">Autobuy Exponent</div>
+    <div id="ppcost-display">Cost: $1e30</div>
+  </div>
+
+  <div id="automation-upgrade" onclick="buyDividerautobuy()">
+    <div id="addendgen-display">Autobuy Divider</div>
+    <div id="ppcost-display">Cost: $1e40</div>
+  </div>
+  </div>
+
+  <div id="generation-container" class="panel" style="display: none;">
+    <div id="money-display">🔋 Generation: This is a better prestige upgrades</div>
+    <div id="generation-upgrade" onclick="buygemGen()">
+      <div id="addendgen-display">Generate 1 gem every second</div>
+      <div id="gemgencost-display">Cost: 10000 PP</div>
+  </div>
+    <div id="generation-upgrade" onclick="buybetterPrestigeGen()">
+      <div id="addendgen-display">Gain 100% PPs on prestige per second</div>
+      <div id="ppcost-display">Cost: 30000 PP</div>
+  </div>
+  <div id="generation-upgrade" onclick="buypriceReducer()">
+    <div id="addendgen-display">cost of addend, multiply, exponent, divider is reduced by 0.9</div>
+    <div id="ppcost-display">Cost: 1e6 PP</div>
+  </div>
+  <div id="generation-upgrade" onclick="buyprestigeautobuyer()">
+    <div id="addendgen-display">Autobuy prestige upgrades</div>
+    <div id="ppcost-display">Cost: 1e7 PP</div>
+  </div>
+  </div>
+
+  
+  <div id="rebirth-container" class="panel" style="display: none;">
+    <div id="money-display">♒️ Rebirth: Rebirth into new body but it will reset everything including automation excluding gems</div>
+    <div id="rp-display">You have <span id="rps">0</span> rebirth points</div>
+    <div id="rebirth-reset" onclick="rebirth()">
+            <div id="addend-display">Rebirth for <span id="rp-gain">0</span> rebirth points</div>
+    <div id="cost-display">Cost: 1.000e8PP</div>
+    </div>
+    <div id="rebirth-upgrade" onclick="buyRebirthUpgrade()">
+      <div id="rmoneymul-display">Rebirth money: x1 to money gain</div>
+      <div id="rpcost-display">Cost: 1 RP</div>
+  </div>
+  <div id="rebirth-upgrade" onclick="buyRebirthPPmulti()">
+    <div id="rppmul-display">Rebirth PP: x1 to pp gain</div>
+    <div id="rpcost2-display">Cost: 1 RP</div>
+</div>
+  </div>
+  </div>
+
+
+
+  <script src="prestige.js"></script>
+  
+</body>
+</html>

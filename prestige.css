@@ -1,0 +1,125 @@
+body {
+    font-family: monospace;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding-top: 50px;
+  }
+
+  #panel-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .panel {
+    width: 300px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    padding: 10px;
+    font-family: monospace;
+    box-sizing: border-box;
+    height: fit-content;
+  }
+  
+  /* #game-container {
+    background: white;
+    border: 2px solid #333;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px gray;
+    text-align: left;
+    margin-left: 3px;
+  } */
+  
+  #money-display {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #gems-display {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  #upgrade {
+    background: lime;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  #prestige-reset {
+    background: rgb(0, 195, 255);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  #prestige-upgrade {
+    background: rgb(0, 195, 255);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  #gem-upgrade {
+    background: rgb(217, 255, 0);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  #automation-upgrade {
+    background: rgb(255, 0, 0);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  #generation-upgrade {
+    background: rgb(0, 4, 255);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+  #rebirth-reset {
+    background: rgb(234, 0, 255);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  #rebirth-upgrade {
+    background: rgb(255, 0, 255);
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  
+  #addend-display,
+  #cost-display {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
