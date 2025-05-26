@@ -76,7 +76,7 @@ function updateDisplay() {
     document.getElementById("ppcost-display").textContent =
     `Cost: ${format(PPupgradeCost)}`;
     document.getElementById("gems-display").textContent =
-  `💎 Gems: ${format(gems)} they have ${format(gemchance.mul(100))}% chance to spawn`;
+  `💎 Gems: ${format(gems)} they have ${format(gemchance.mul(100))}% chance to spawn every second`;
   document.getElementById("gemchance-display").textContent =
   `Gem chance: +${format(gemchance.mul(100))}%`;
   document.getElementById("gem-money-display").textContent =
